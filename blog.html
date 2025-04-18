@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Fitness - Stoic Gym</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="assets/style/style-blog.css" />
+</head>
+<body>
+    <!-- Header con Mega Menú -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Stoic Gym</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+                Servicios
+                </a>
+                <!-- Submenús estilo mega-menu -->
+                <ul class="dropdown-menu mega-menu p-3">
+                <li><a class="dropdown-item" href="clases.html">Clases</a></li>
+                <li><a class="dropdown-item" href="entrenadores.html">Entrenadores</a></li>
+                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                <li><a href="precios.html" class="dropdown-item">Precios</a></li>
+                <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Blog Fitness</h2>
+
+    <!-- Filtros por etiquetas -->
+    <div class="tag-filter text-center mb-4">
+      <button class="btn btn-outline-primary mx-1 active" data-tag="all">Todos</button>
+      <button class="btn btn-outline-primary mx-1" data-tag="nutricion">Nutrición</button>
+      <button class="btn btn-outline-primary mx-1" data-tag="entrenamiento">Entrenamiento</button>
+      <button class="btn btn-outline-primary mx-1" data-tag="bienestar">Bienestar</button>
+    </div>
+
+    <!-- Diseño tipo revista con CSS Grid -->
+    <div class="blog-grid">
+      <div class="card blog-item" data-tag="nutricion" data-aos="fade-up">
+        <img src="assets/img/food.jpg" class="card-img-top" alt="Nutrición">
+        <div class="card-body">
+          <h5 class="card-title">Comidas para energía duradera</h5>
+          <p class="card-text">Tips alimenticios para entrenamientos largos.</p>
+        </div>
+      </div>
+      <div class="card blog-item" data-tag="entrenamiento" data-aos="fade-up">
+        <img src="assets/img/fuerza.jpg" class="card-img-top" alt="Entrenamiento">
+        <div class="card-body">
+          <h5 class="card-title">Rutinas de fuerza para principiantes</h5>
+          <p class="card-text">Guía simple para empezar con pesas.</p>
+        </div>
+      </div>
+      <div class="card blog-item" data-tag="bienestar" data-aos="fade-up">
+        <img src="assets/img/mindfulness.jpg" class="card-img-top" alt="Bienestar">
+        <div class="card-body">
+          <h5 class="card-title">Respira, medita, mejora</h5>
+          <p class="card-text">Beneficios del mindfulness en tu día a día.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comentarios -->
+    <div class="mt-5">
+      <h4>Comentarios</h4>
+      <div class="comment bg-light p-3 rounded">
+        <strong>Lucía:</strong> ¡Este artículo me ayudó mucho! <br>
+        <small><a href="#" class="text-primary responder">Responder</a></small>
+      </div>
+      <div class="comment bg-light p-3 rounded">
+        <strong>Marcos:</strong> Más tips de comida por favor 🙏 <br>
+        <small><a href="#" class="text-primary responder">Responder</a></small>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer con formulario de contacto y mapa embebido -->
+    <footer class="bg-dark text-white p-4">
+      <div class="container">
+        <div class="row">
+          <!-- Formulario con spinner -->
+          <div class="col-md-6">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Enviar <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+              </button>
+            </form>
+          </div>
+          <!-- Mapa -->
+          <div class="col-md-6">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509999!2d144.9537353153164!3d-37.81627997975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f7b5a9b%3A0x5045675218ceed30!2sStoic%20Gym!5e0!3m2!1ses-419!2sar!4v1633031234567" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+  <!-- Scripts -->
+  <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/blog.js"></script>
+</body>
+</html>
